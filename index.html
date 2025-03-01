@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatBot Interface</title>
+  <style>
+    /* CSS Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000; /* Black background */
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #fff;
+    }
+
+    .chat-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      width: 90%;
+    }
+
+    .chat-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .chat-iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 600px) {
+      .chat-iframe {
+        height: 400px;
+      }
+      .chat-container h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <h1>Chat with our Bot</h1>
+    <iframe
+      class="chat-iframe"
+      src="https://app.chatgptbuilder.io/webchat/?p=1539345&ref=1740853153840"
+    ></iframe>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const chatIframe = document.querySelector('.chat-iframe');
+      chatIframe.addEventListener('load', function () {
+        console.log('ChatBot loaded successfully.');
+      });
+    });
+  </script>
+</body>
+</html>
